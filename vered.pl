@@ -28,7 +28,7 @@ if (-f $opts{"f"}) {
 				"fileVersion"	=>	$opts{"f"},
 			);
 	
-		my $term = Term::ReadLine->new();
+		my $term = Term::ReadLine->new("vered");
 		my $termPrompt = "> ";
 		my $termOut = $term->OUT() or \*STDOUT;
 		while (defined(my $termLine = $term->readline($termPrompt))) {
